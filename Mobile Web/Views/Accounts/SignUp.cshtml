@@ -1,0 +1,54 @@
+﻿@model Mobile_Web.Models.User_Model
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<section class="accounts-signup-s1">
+    <!--<form name="signup" class="accounts-signup-form container" onsubmit="return validation()">-->
+    @using (Html.BeginForm("SignUp", "Accounts", FormMethod.Post, new { @class = "accounts-signup-form container", name = "signup", onsubmit = "return validation();" }))
+    {
+        <center><h1>Sign up now to create your<br />Z-Tech Account</h1></center>
+        <div class="mb-3">
+            <label for="exampleInputUsername" class="form-label">Username</label>
+            <input name="username" type="text" class="form-control" id="exampleInputUsername" aria-describedby="userHelp">
+            <div id="errorUser" style="color:red;" class="form-text"></div>
+            <div style="color:red;" class="form-text">@Html.ValidationMessageFor(x => x.username)</div>
+            <div id="userHelp" class="form-text">Your username must be unique.</div>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail" class="form-label">Email</label>
+            <input name="email" type="email" class="form-control" id="exampleInputEmail" aria-describedby="emailHelp">
+            <div id="errorEmail" style="color:red;" class="form-text"></div>
+            <div id="emailHelp" class="form-text">You can use letters, numbers & periods</div>
+        </div>
+        <div class="mb-3">
+            <select name="country" id="select-country" class="form-select form-select-md" aria-label=".form-select-lg example">
+                <option value="Country" selected>Country</option>
+                <option value="Argentina">Argentina</option>
+                <option value="Brazil">Brazil</option>
+                <option value="China">China</option>
+                <option value="United States">United States</option>
+                <option value="Pakistan">Pakistan</option>
+                <option value="United Kindom">United Kindom</option>
+                <option value="India">India</option>
+                <option value="Germany">Germany</option>
+            </select>
+            <div id="errorCountry" style="color:red;" class="form-text"></div>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <input name="password" type="password" class="form-control" id="exampleInputPassword1">
+            <div id="errorPassw" style="color:red;" class="form-text"></div>
+        </div>
+        <div name="cpassword" class="mb-3">
+            <label for="exampleInputcPassword1" class="form-label">Confirm Password</label>
+            <input type="password" class="form-control" id="exampleInputcPassword1">
+            <div id="errorCPassw" style="color:red;" class="form-text"></div>
+        </div>
+        <button type="submit" class="btn btn-primary mt-3">Sign up</button>
+    }
+</section>
+@section signupjs
+{
+    <script type="text/javascript" src="~/Scripts/JS Files/Signup.js"></script>
+}

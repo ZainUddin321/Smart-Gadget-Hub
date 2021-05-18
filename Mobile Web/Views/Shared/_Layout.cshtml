@@ -1,0 +1,216 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="~/Bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="~/Content/Style.css" />
+    <link href="~/Icons/css/all.css" rel="stylesheet" />
+    <title>Z-TECH</title>
+</head>
+<body>
+    <!--<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Sign in now</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form>
+                    <div class="modal-body">
+
+                        <div class="mb-3">
+                            <label for="exampleInputUsername" class="form-label">Username</label>
+                            <input type="text" class="form-control" id="exampleInputUsername" />
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1" aria-describedby="passwordHelpBlock">
+                            <div id="passwordHelpBlock" class="form-text">
+                                Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.
+                            </div>
+                        </div>
+                        <div class="text-black-50 mt-1"><p>Don't have any account? <u>Create account now.</u></p></div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand d-flex w-50 mr-auto" href="~/Home/Index"><img width="146px" height="35px" src="~/Images/Logo/Z-Tech Logo1.png"/></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse  w-100" id="navbarNavDropdown">
+                    <ul class="navbar-nav w-100 justify-content-center">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="~/Home/Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="~/Home/Accessories">Accessories</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Support</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Dropdown link
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav ml-auto w-100 justify-content-end">
+                        <li class="nav-item">
+                            <a class="nav-link" href="~/Cart/Index"><i class="fas fa-shopping-cart" style="color:white"></i> Carts</a>
+                        </li>
+                       @if (User.Identity.IsAuthenticated)
+                        {
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fas fa-user" style="color:white"></i> @User.Identity.Name
+                            </a>
+                            <ul class="signoutdrop dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li>
+                                    <a class="dropdown-item" href="~/Accounts/SignOut">Sign Out</a>
+                                </li>
+                            </ul>
+                        </li>
+                        }
+                        else
+                        {
+                            <li><a class="nav-link" href="~/Accounts/SignIn"><i class="fas fa-user" style="color:white"></i> Sign In</a></li>
+                        }
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+        <hr />
+        <div class="container-fluid bg-dark p-3">
+            <center>
+                <div class="row justify-content-center text-white text-center">
+                    <div class="col-sm-2">
+                        <a href="~/Home/Accessories#sec1" style="color:white;text-decoration:none;">
+                            <i class="fas fa-mobile-alt fa-2x"></i>
+                            <p class="mt-1 mb-sm-1 text-white-50">Smartphones</p>
+                        </a>
+                    </div>
+                    <div class="col-sm-2">
+                        <a href="~/Home/Accessories#sec2" style="color:white;text-decoration:none;">
+                            <i class="fas fa-desktop fa-2x"></i>
+                            <p class="mt-1 mb-sm-1 text-white-50">Laptops</p>
+                        </a>
+                    </div>
+                    <div class="col-sm-2">
+                        <a href="~/Home/Accessories#sec3" style="color:white;text-decoration:none;">
+                            <i class="fas fa-tablet-alt fa-2x"></i>
+                            <p class="mt-1  mb-sm-1 text-white-50">Tablets</p>
+                        </a>
+                    </div>
+                </div>
+            </center>
+        </div>
+    </header>
+    <hr />
+    <div>
+        @RenderBody()
+    </div>
+    <footer>
+        <div class="container-fluid bg-dark p-3 pt-5">
+            <center>
+                <div class="row justify-content-center text-white text-center">
+                    <h1 class="mb-5">Follow us on</h1>
+                    <div class="col-sm-2">
+                        <a href="http://www.facebook.com" style="text-decoration:none;">
+                            <i class="fab fa-facebook-f text-white-50"></i>
+                            <p class="mt-1 mb-sm-3 text-white-50">Facebook</p>
+                        </a>
+                    </div>
+                    <div class="col-sm-2">
+                        <a href="http://www.twitter.com" style="text-decoration:none;">
+                            <i class="fab fa-twitter text-white-50"></i>
+                            <p class="mt-1 mb-sm-3 text-white-50">Twitter</p>
+                        </a>
+                    </div>
+                    <div class="col-sm-2">
+                        <a href="http://www.youtube.com" style="text-decoration:none;">
+                            <i class="fab fa-youtube text-white-50"></i>
+                            <p class="mt-1  mb-sm-3 text-white-50">Youtube</p>
+                        </a>
+                    </div>
+                    <div class="col-sm-2">
+                        <a href="http://www.instagram.com" style="text-decoration:none;">
+                            <i class="fab fa-instagram text-white-50"></i>
+                            <p class="mt-1  mb-sm-3 text-white-50">Instagram</p>
+                        </a>
+                    </div>
+                </div>
+                <hr style="color:azure">
+            </center>
+            <div class="row justify-content-center text-white mt-4">
+                <div class="col-sm-3">
+                    <h5>Product & Services</h5>
+                    <p style="font-size:0.8em" class="mt-1 mb-sm-3 text-white-50">Smartphones</p>
+                    <p style="font-size:0.8em" class="mt-1 mb-sm-3 text-white-50">Tablets</p>
+                    <p style="font-size:0.8em" class="mt-1 mb-sm-3 text-white-50">Audio Sounds</p>
+                    <p style="font-size:0.8em" class="mt-1 mb-sm-3 text-white-50">Watches</p>
+                    <p style="font-size:0.8em" class="mt-1 mb-sm-3 text-white-50">TVs</p>
+                    <p style="font-size:0.8em" class="mt-1 mb-sm-3 text-white-50">Monitors</p>
+                    <p style="font-size:0.8em" class="mt-1 mb-sm-3 text-white-50">Laptops</p>
+                </div>
+                <div class="col-sm-3">
+                    <h5>Shop</h5>
+                    <p style="font-size:0.8em" class="mt-1 mb-sm-3 text-white-50">Offers</p>
+                    <p style="font-size:0.8em" class="mt-1 mb-sm-3 text-white-50">Trade Up</p>
+                    <p style="font-size:0.8em" class="mt-1 mb-sm-3 text-white-50">Samsung Members</p>
+                    <p style="font-size:0.8em" class="mt-1 mb-sm-3 text-white-50">Store Locator</p>
+                    <p style="font-size:0.8em" class="mt-1 mb-sm-3 text-white-50">Experience Store</p>
+                </div>
+                <div class="col-sm-3">
+                    <h5>Support</h5>
+                    <p style="font-size:0.8em" class="mt-1  mb-sm-3 text-white-50">Contact Us</p>
+                    <p style="font-size:0.8em" class="mt-1 mb-sm-3 text-white-50">Phone Support</p>
+                    <p style="font-size:0.8em" class="mt-1 mb-sm-3 text-white-50">Email Support</p>
+                    <p style="font-size:0.8em" class="mt-1 mb-sm-3 text-white-50">Contact CEO</p>
+                    <p style="font-size:0.8em" class="mt-1 mb-sm-3 text-white-50">Community</p>
+                </div>
+                <div class="col-sm-3">
+                    <h5>Company</h5>
+                    <p style="font-size:0.8em" class="mt-1  mb-sm-3 text-white-50">About Us</p>
+                    <p style="font-size:0.8em" class="mt-1  mb-sm-3 text-white-50">Investor Relations(IR)</p>
+                    <p style="font-size:0.8em" class="mt-1  mb-sm-3 text-white-50">News</p>
+                    <p style="font-size:0.8em" class="mt-1  mb-sm-3 text-white-50">Corporate Citizenships</p>
+                </div>
+            </div>
+            <hr style="color:azure">
+            <div class="container-fluid bg-dark mt-4">
+                <p class="text-center text-white-50">Copy Right © 2021 Mobile Web | Created by Zain Uddin | Privacy Policy | Term of Use | Pakistan</p>
+            </div>
+        </div>
+    </footer>
+    @RenderSection("jsfile", required: false)
+    @RenderSection("signupjs", required: false)
+    @RenderSection("signinjs", required: false)
+    <script src="~/Bootstrap/js/bootstrap.min.js"></script>
+    <script src="~/Scripts/jquery-3.0.0.min.js"></script>
+
+</body>
+</html>

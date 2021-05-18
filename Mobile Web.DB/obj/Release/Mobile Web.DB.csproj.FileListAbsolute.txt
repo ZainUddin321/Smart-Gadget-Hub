@@ -1,0 +1,14 @@
+F:\source\repos\Mobile Web\Mobile Web.DB\bin\Release\Mobile Web.DB.dll.config
+F:\source\repos\Mobile Web\Mobile Web.DB\bin\Release\Mobile Web.DB.dll
+F:\source\repos\Mobile Web\Mobile Web.DB\bin\Release\Mobile Web.DB.pdb
+F:\source\repos\Mobile Web\Mobile Web.DB\bin\Release\EntityFramework.dll
+F:\source\repos\Mobile Web\Mobile Web.DB\bin\Release\EntityFramework.SqlServer.dll
+F:\source\repos\Mobile Web\Mobile Web.DB\bin\Release\Mobile Web.Models.dll
+F:\source\repos\Mobile Web\Mobile Web.DB\bin\Release\Mobile Web.Models.pdb
+F:\source\repos\Mobile Web\Mobile Web.DB\bin\Release\EntityFramework.xml
+F:\source\repos\Mobile Web\Mobile Web.DB\bin\Release\EntityFramework.SqlServer.xml
+F:\source\repos\Mobile Web\Mobile Web.DB\obj\Release\Mobile Web.DB.csprojAssemblyReference.cache
+F:\source\repos\Mobile Web\Mobile Web.DB\obj\Release\Mobile Web.DB.csproj.CoreCompileInputs.cache
+F:\source\repos\Mobile Web\Mobile Web.DB\obj\Release\Mobile Web.DB.csproj.CopyComplete
+F:\source\repos\Mobile Web\Mobile Web.DB\obj\Release\Mobile Web.DB.dll
+F:\source\repos\Mobile Web\Mobile Web.DB\obj\Release\Mobile Web.DB.pdb

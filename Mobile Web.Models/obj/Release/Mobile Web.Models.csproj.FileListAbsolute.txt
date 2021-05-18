@@ -1,0 +1,6 @@
+F:\source\repos\Mobile Web\Mobile Web.Models\bin\Release\Mobile Web.Models.dll
+F:\source\repos\Mobile Web\Mobile Web.Models\bin\Release\Mobile Web.Models.pdb
+F:\source\repos\Mobile Web\Mobile Web.Models\obj\Release\Mobile Web.Models.csprojAssemblyReference.cache
+F:\source\repos\Mobile Web\Mobile Web.Models\obj\Release\Mobile Web.Models.csproj.CoreCompileInputs.cache
+F:\source\repos\Mobile Web\Mobile Web.Models\obj\Release\Mobile Web.Models.dll
+F:\source\repos\Mobile Web\Mobile Web.Models\obj\Release\Mobile Web.Models.pdb
