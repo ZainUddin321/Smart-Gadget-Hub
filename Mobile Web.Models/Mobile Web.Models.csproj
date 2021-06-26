@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Cart Model.cs" />
+    <Compile Include="Product Model.cs" />
     <Compile Include="User Model.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

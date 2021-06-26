@@ -1,4 +1,4 @@
-﻿
+﻿@model dynamic
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
@@ -20,24 +20,26 @@
     <center><h1>Smartphones</h1></center>
     <div class="container justify-content-center">
         <div class="row">
+            @for (int i = 0; i < Model.Smartphones.Rows.Count; i++)
+            {
             <div class="col-lg-4">
                 <div class="container d-flex justify-content-center">
                     <figure class="card card-product-grid card-lg">
                         <a href="#" class="img-wrap" data-abc="true">
-                            <img src="~/Images/Products/Mobile1.png">
+                            <img src="@Model.Smartphones.Rows[i]["image"].ToString()">
                         </a>
                         <figcaption class="info-wrap">
                             <div class="row">
-                                <div class="col-md-6 col-xs-9"> <a href="#" class="title" data-abc="true">Realme C15</a> <span class="rated">Smartphones</span> </div>
+                                <div class="col-md-6 col-xs-9"> <a href="#" class="title" data-abc="true">@Model.Smartphones.Rows[i]["pname"].ToString()</a> <span class="rated">@Model.Smartphones.Rows[i]["ptype"].ToString()</span> </div>
                                 <div class="col-md-6 col-xs-3">
-                                    <div class="rating text-right"> <i class="fa fa-star"></i>  <i class="fa fa-star"></i> <i class="fa fa-star"></i> <span class="rated">Rated 2.6/3</span> </div>
+                                    <div class="rating text-right"> <i class="fa fa-star"></i>  <i class="fa fa-star"></i> <i class="fa fa-star"></i> <span class="rated">Rated @Model.Smartphones.Rows[i]["rating"].ToString()/3</span> </div>
                                 </div>
                             </div>
                         </figcaption>
                         <div class="bottom-wrap-payment">
                             <figcaption class="info-wrap">
                                 <div class="row">
-                                    <div class="col-md-9 col-xs-9"> <a href="#" class="title" data-abc="true">$145</a> <span class="rated">VISA Platinum</span> </div>
+                                    <div class="col-md-9 col-xs-9"> <a href="#" class="title" data-abc="true">$@Model.Smartphones.Rows[i]["price"].ToString()</a> <span class="rated">@Model.Smartphones.Rows[i]["payment_method"].ToString()</span> </div>
                                     <div class="col-md-3 col-xs-3">
                                         <div class="rating text-right"> #### 8787 </div>
                                     </div>
@@ -45,71 +47,12 @@
                             </figcaption>
                         </div>
                         <div class="bottom-wrap">
-                            <a class="btn btn-primary float-right" data-abc="true" href="@Url.Action("getProduct", "Cart", new { name = "Realme C15", type = "Smartphone", price = 145, method = "Visa Platinum", img = "/Images/Products/Mobile1.png" })"> <i class="fas fa-shopping-cart"></i> Add to Cart </a>
+                            <a class="btn btn-primary float-right" data-abc="true" href="@Url.Action("getProduct", "Cart", new { pid = Convert.ToInt32(@Model.Smartphones.Rows[i]["P_id"]) })"> <i class="fas fa-shopping-cart"></i> Add to Cart </a>
                         </div>
                     </figure>
                 </div>
             </div>
-            <div class="col-lg-4">
-                <div class="container d-flex justify-content-center">
-                    <figure class="card card-product-grid card-lg">
-                        <a href="#" class="img-wrap" data-abc="true">
-                            <img src="~/Images/Products/Mobile2.jpg">
-                        </a>
-                        <figcaption class="info-wrap">
-                            <div class="row">
-                                <div class="col-md-6 col-xs-9"> <a href="#" class="title" data-abc="true">Samsung A70</a> <span class="rated">Smartphones</span> </div>
-                                <div class="col-md-6 col-xs-3">
-                                    <div class="rating text-right"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i>  <span class="rated">Rated 3.0/3</span> </div>
-                                </div>
-                            </div>
-                        </figcaption>
-                        <div class="bottom-wrap-payment">
-                            <figcaption class="info-wrap">
-                                <div class="row">
-                                    <div class="col-md-9 col-xs-9"> <a href="#" class="title" data-abc="true">$329</a> <span class="rated">VISA Platinum</span> </div>
-                                    <div class="col-md-3 col-xs-3">
-                                        <div class="rating text-right"> #### 8787 </div>
-                                    </div>
-                                </div>
-                            </figcaption>
-                        </div>
-                        <div class="bottom-wrap">
-                            <a class="btn btn-primary float-right" data-abc="true" href="@Url.Action("getProduct", "Cart", new { name = "Samsung A70", type = "Smartphone", price = 329, method = "Visa Platinum", img = "/Images/Products/Mobile2.jpg" })"> <i class="fas fa-shopping-cart"></i> Add to Cart </a>
-                        </div>
-                    </figure>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="container d-flex justify-content-center">
-                    <figure class="card card-product-grid card-lg">
-                        <a href="#" class="img-wrap" data-abc="true">
-                            <img src="~/Images/Products/Mobile3.png">
-                        </a>
-                        <figcaption class="info-wrap">
-                            <div class="row">
-                                <div class="col-md-6 col-xs-9"> <a href="#" class="title" data-abc="true">Realme C12</a> <span class="rated">Smartphones</span> </div>
-                                <div class="col-md-6 col-xs-3">
-                                    <div class="rating text-right"> <i class="fa fa-star"></i>  <i class="fa fa-star"></i> <i class="fa fa-star"></i> <span class="rated">Rated 2.2/3</span> </div>
-                                </div>
-                            </div>
-                        </figcaption>
-                        <div class="bottom-wrap-payment">
-                            <figcaption class="info-wrap">
-                                <div class="row">
-                                    <div class="col-md-9 col-xs-9"> <a href="#" class="title" data-abc="true">$188</a> <span class="rated">VISA Platinum</span> </div>
-                                    <div class="col-md-3 col-xs-3">
-                                        <div class="rating text-right"> #### 8787 </div>
-                                    </div>
-                                </div>
-                            </figcaption>
-                        </div>
-                        <div class="bottom-wrap">
-                            <a class="btn btn-primary float-right" data-abc="true" href="@Url.Action("getProduct", "Cart", new { name = "Realme C12", type = "Smartphone", price = 188, method = "Visa Platinum", img = "/Images/Products/Mobile3.png" })"> <i class="fas fa-shopping-cart"></i> Add to Cart </a>
-                        </div>
-                    </figure>
-                </div>
-            </div>
+            }
         </div>
     </div>
 </section>
@@ -117,96 +60,40 @@
     <center><h1>Laptops</h1></center>
     <div class="container justify-content-center">
         <div class="row">
-            <div class="col-lg-4">
-                <div class="container d-flex justify-content-center">
-                    <figure class="card card-product-grid card-lg">
-                        <a href="#" class="img-wrap" data-abc="true">
-                            <img src="~/Images/Products/laptop1.jpg">
-                        </a>
-                        <figcaption class="info-wrap">
-                            <div class="row">
-                                <div class="col-md-6 col-xs-9"> <a href="#" class="title" data-abc="true">Dell Latitude</a> <span class="rated">Laptops</span> </div>
-                                <div class="col-md-6 col-xs-3">
-                                    <div class="rating text-right"> <i class="fa fa-star"></i>  <i class="fa fa-star"></i> <i class="fa fa-star"></i> <span class="rated">Rated 2.5/3</span> </div>
-                                </div>
-                            </div>
-                        </figcaption>
-                        <div class="bottom-wrap-payment">
+            @for (int i = 0; i < Model.Laptops.Rows.Count; i++)
+             {
+                <div class="col-lg-4">
+                    <div class="container d-flex justify-content-center">
+                        <figure class="card card-product-grid card-lg">
+                            <a href="#" class="img-wrap" data-abc="true">
+                                <img src="@Model.Laptops.Rows[i]["image"].ToString()">
+                            </a>
                             <figcaption class="info-wrap">
                                 <div class="row">
-                                    <div class="col-md-9 col-xs-9"> <a href="#" class="title" data-abc="true">$344.90</a> <span class="rated">VISA Platinum</span> </div>
-                                    <div class="col-md-3 col-xs-3">
-                                        <div class="rating text-right"> #### 8787 </div>
+                                    <div class="col-md-6 col-xs-9"> <a href="#" class="title" data-abc="true">@Model.Laptops.Rows[i]["pname"].ToString()</a> <span class="rated">@Model.Laptops.Rows[i]["ptype"].ToString()</span> </div>
+                                    <div class="col-md-6 col-xs-3">
+                                        <div class="rating text-right"> <i class="fa fa-star"></i>  <i class="fa fa-star"></i> <i class="fa fa-star"></i> <span class="rated">Rated @Model.Laptops.Rows[i]["rating"].ToString()/3</span> </div>
                                     </div>
                                 </div>
                             </figcaption>
-                        </div>
-                        <div class="bottom-wrap">
-                            <a class="btn btn-primary float-right" data-abc="true" href="@Url.Action("getProduct", "Cart", new { name = "Dell Latitude", type = "Laptop", price = 344, method = "Visa Platinum", img = "/Images/Products/laptop1.jpg" })"> <i class="fas fa-shopping-cart"></i> Add to Cart </a>
-                        </div>
-                    </figure>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="container d-flex justify-content-center">
-                    <figure class="card card-product-grid card-lg">
-                        <a href="#" class="img-wrap" data-abc="true">
-                            <img src="~/Images/Products/laptop2.jpg">
-                        </a>
-                        <figcaption class="info-wrap">
-                            <div class="row">
-                                <div class="col-md-6 col-xs-9"> <a href="#" class="title" data-abc="true">Lenovo Ideapad</a> <span class="rated">Laptops</span> </div>
-                                <div class="col-md-6 col-xs-3">
-                                    <div class="rating text-right"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i>  <span class="rated">Rated 2.1/3</span> </div>
-                                </div>
-                            </div>
-                        </figcaption>
-                        <div class="bottom-wrap-payment">
-                            <figcaption class="info-wrap">
-                                <div class="row">
-                                    <div class="col-md-9 col-xs-9"> <a href="#" class="title" data-abc="true">$996</a> <span class="rated">VISA Platinum</span> </div>
-                                    <div class="col-md-3 col-xs-3">
-                                        <div class="rating text-right"> #### 8787 </div>
+                            <div class="bottom-wrap-payment">
+                                <figcaption class="info-wrap">
+                                    <div class="row">
+                                        <div class="col-md-9 col-xs-9"> <a href="#" class="title" data-abc="true">$@Model.Laptops.Rows[i]["price"].ToString()</a> <span class="rated">@Model.Laptops.Rows[i]["payment_method"].ToString()</span> </div>
+                                        <div class="col-md-3 col-xs-3">
+                                            <div class="rating text-right"> #### 8787 </div>
+                                        </div>
                                     </div>
-                                </div>
-                            </figcaption>
-                        </div>
-                        <div class="bottom-wrap">
-                            <a class="btn btn-primary float-right" data-abc="true" href="@Url.Action("getProduct", "Cart", new { name = "Lenovo Ideapad", type = "Laptop", price = 996, method = "Visa Platinum", img = "/Images/Products/laptop2.jpg" })"> <i class="fas fa-shopping-cart"></i> Add to Cart </a>
-                        </div>
-                    </figure>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="container d-flex justify-content-center">
-                    <figure class="card card-product-grid card-lg">
-                        <a href="#" class="img-wrap" data-abc="true">
-                            <img src="~/Images/Products/laptop3.jpg">
-                        </a>
-                        <figcaption class="info-wrap">
-                            <div class="row">
-                                <div class="col-md-6 col-xs-9"> <a href="#" class="title" data-abc="true">HP ProBook</a> <span class="rated">Laptops</span> </div>
-                                <div class="col-md-6 col-xs-3">
-                                    <div class="rating text-right"> <i class="fa fa-star"></i>  <i class="fa fa-star"></i> <i class="fa fa-star"></i> <span class="rated">Rated 2.9/3</span> </div>
-                                </div>
+                                </figcaption>
                             </div>
-                        </figcaption>
-                        <div class="bottom-wrap-payment">
-                            <figcaption class="info-wrap">
-                                <div class="row">
-                                    <div class="col-md-9 col-xs-9"> <a href="#" class="title" data-abc="true">$859</a> <span class="rated">VISA Platinum</span> </div>
-                                    <div class="col-md-3 col-xs-3">
-                                        <div class="rating text-right"> #### 8787 </div>
-                                    </div>
-                                </div>
-                            </figcaption>
-                        </div>
-                        <div class="bottom-wrap">
-                            <a class="btn btn-primary float-right" data-abc="true" href="@Url.Action("getProduct", "Cart", new { name = "HP ProBook", type = "Laptop", price = 859, method = "Visa Platinum", img = "/Images/Products/laptop3.jpg" })"> <i class="fas fa-shopping-cart"></i> Add to Cart </a>
-                        </div>
-                    </figure>
+                            <div class="bottom-wrap">
+                                <a class="btn btn-primary float-right" data-abc="true" href="@Url.Action("getProduct", "Cart", new { pid = Convert.ToInt32(@Model.Laptops.Rows[i]["P_id"]) })"> <i class="fas fa-shopping-cart"></i> Add to Cart </a>
+                            </div>
+                        </figure>
+                    </div>
                 </div>
-            </div>
+             }
+
         </div>
     </div>
 </section>
@@ -214,96 +101,39 @@
     <center><h1>Tablets</h1></center>
     <div class="container justify-content-center">
         <div class="row">
-            <div class="col-lg-4">
-                <div class="container d-flex justify-content-center">
-                    <figure class="card card-product-grid card-lg">
-                        <a href="#" class="img-wrap" data-abc="true">
-                            <img src="~/Images/Products/Tab2.jpg">
-                        </a>
-                        <figcaption class="info-wrap">
-                            <div class="row">
-                                <div class="col-md-6 col-xs-9"> <a href="#" class="title" data-abc="true">Samsung Tab A3</a> <span class="rated">Tablets</span> </div>
-                                <div class="col-md-6 col-xs-3">
-                                    <div class="rating text-right"> <i class="fa fa-star"></i>  <i class="fa fa-star"></i> <i class="fa fa-star"></i> <span class="rated">Rated 2.7/3</span> </div>
-                                </div>
-                            </div>
-                        </figcaption>
-                        <div class="bottom-wrap-payment">
+            @for (int i = 0; i < Model.Laptops.Rows.Count; i++)
+            {
+                <div class="col-lg-4">
+                    <div class="container d-flex justify-content-center">
+                        <figure class="card card-product-grid card-lg">
+                            <a href="#" class="img-wrap" data-abc="true">
+                                <img src="@Model.Tablets.Rows[i]["image"].ToString()">
+                            </a>
                             <figcaption class="info-wrap">
                                 <div class="row">
-                                    <div class="col-md-9 col-xs-9"> <a href="#" class="title" data-abc="true">$569</a> <span class="rated">VISA Platinum</span> </div>
-                                    <div class="col-md-3 col-xs-3">
-                                        <div class="rating text-right"> #### 8787 </div>
+                                    <div class="col-md-6 col-xs-9"> <a href="#" class="title" data-abc="true">@Model.Tablets.Rows[i]["pname"].ToString()</a> <span class="rated">@Model.Tablets.Rows[i]["ptype"].ToString()</span> </div>
+                                    <div class="col-md-6 col-xs-3">
+                                        <div class="rating text-right"> <i class="fa fa-star"></i>  <i class="fa fa-star"></i> <i class="fa fa-star"></i> <span class="rated">Rated @Model.Tablets.Rows[i]["rating"].ToString()/3</span> </div>
                                     </div>
                                 </div>
                             </figcaption>
-                        </div>
-                        <div class="bottom-wrap">
-                            <a class="btn btn-primary float-right" data-abc="true" href="@Url.Action("getProduct", "Cart", new { name = "Samsung Tab A3", type = "Tablet", price = 569, method = "Visa Platinum", img = "/Images/Products/Tab2.jpg" })"> <i class="fas fa-shopping-cart"></i> Add to Cart </a>
-                        </div>
-                    </figure>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="container d-flex justify-content-center">
-                    <figure class="card card-product-grid card-lg">
-                        <a href="#" class="img-wrap" data-abc="true">
-                            <img src="~/Images/Products/Tab1.jpeg">
-                        </a>
-                        <figcaption class="info-wrap">
-                            <div class="row">
-                                <div class="col-md-6 col-xs-9"> <a href="#" class="title" data-abc="true">Samsung Tab C3</a> <span class="rated">Tablets</span> </div>
-                                <div class="col-md-6 col-xs-3">
-                                    <div class="rating text-right"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i>  <span class="rated">Rated 2.6/3</span> </div>
-                                </div>
-                            </div>
-                        </figcaption>
-                        <div class="bottom-wrap-payment">
-                            <figcaption class="info-wrap">
-                                <div class="row">
-                                    <div class="col-md-9 col-xs-9"> <a href="#" class="title" data-abc="true">$423</a> <span class="rated">VISA Platinum</span> </div>
-                                    <div class="col-md-3 col-xs-3">
-                                        <div class="rating text-right"> #### 8787 </div>
+                            <div class="bottom-wrap-payment">
+                                <figcaption class="info-wrap">
+                                    <div class="row">
+                                        <div class="col-md-9 col-xs-9"> <a href="#" class="title" data-abc="true">$@Model.Tablets.Rows[i]["price"].ToString()</a> <span class="rated">@Model.Tablets.Rows[i]["payment_method"].ToString()</span> </div>
+                                        <div class="col-md-3 col-xs-3">
+                                            <div class="rating text-right"> #### 8787 </div>
+                                        </div>
                                     </div>
-                                </div>
-                            </figcaption>
-                        </div>
-                        <div class="bottom-wrap">
-                            <a class="btn btn-primary float-right" data-abc="true" href="@Url.Action("getProduct", "Cart", new { name = "Samsung Tab C3", type = "Tablet", price = 423, method = "Visa Platinum", img = "/Images/Products/Tab1.jpeg" })"> <i class="fas fa-shopping-cart"></i> Add to Cart </a>
-                        </div>
-                    </figure>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="container d-flex justify-content-center">
-                    <figure class="card card-product-grid card-lg">
-                        <a href="#" class="img-wrap" data-abc="true">
-                            <img src="~/Images/Products/Tab3.jpg">
-                        </a>
-                        <figcaption class="info-wrap">
-                            <div class="row">
-                                <div class="col-md-6 col-xs-9"> <a href="#" class="title" data-abc="true">Apple Pro 11</a> <span class="rated">Tablets</span> </div>
-                                <div class="col-md-6 col-xs-3">
-                                    <div class="rating text-right"> <i class="fa fa-star"></i>  <i class="fa fa-star"></i> <i class="fa fa-star"></i> <span class="rated">Rated 2.9/3</span> </div>
-                                </div>
+                                </figcaption>
                             </div>
-                        </figcaption>
-                        <div class="bottom-wrap-payment">
-                            <figcaption class="info-wrap">
-                                <div class="row">
-                                    <div class="col-md-9 col-xs-9"> <a href="#" class="title" data-abc="true">$1,009</a> <span class="rated">VISA Platinum</span> </div>
-                                    <div class="col-md-3 col-xs-3">
-                                        <div class="rating text-right"> #### 8787 </div>
-                                    </div>
-                                </div>
-                            </figcaption>
-                        </div>
-                        <div class="bottom-wrap">
-                            <a class="btn btn-primary float-right" data-abc="true" href="@Url.Action("getProduct", "Cart", new { name = "Apple Pro 11", type = "Tablet", price = 1009, method = "Visa Platinum", img = "/Images/Products/Tab3.jpg" })"> <i class="fas fa-shopping-cart"></i> Add to Cart </a>
-                        </div>
-                    </figure>
+                            <div class="bottom-wrap">
+                                <a class="btn btn-primary float-right" data-abc="true" href="@Url.Action("getProduct", "Cart", new { pid = Convert.ToInt32(@Model.Tablets.Rows[i]["P_id"]) })"> <i class="fas fa-shopping-cart"></i> Add to Cart </a>
+                            </div>
+                        </figure>
+                    </div>
                 </div>
-            </div>
+            }
         </div>
     </div>
 </section>

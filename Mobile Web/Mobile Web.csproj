@@ -125,6 +125,14 @@
     <Content Include="Content\bootstrap-reboot.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\images\animated-overlay.gif" />
+    <Content Include="Content\images\ui-icons_444444_256x240.png" />
+    <Content Include="Content\images\ui-icons_555555_256x240.png" />
+    <Content Include="Content\images\ui-icons_777620_256x240.png" />
+    <Content Include="Content\images\ui-icons_777777_256x240.png" />
+    <Content Include="Content\images\ui-icons_cc0000_256x240.png" />
+    <Content Include="Content\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Content\jquery-ui-1.10.4.custom.min.css" />
     <Content Include="Content\Style.css" />
     <Content Include="Icons\attribution.js" />
     <Content Include="Icons\css\all.css" />
@@ -1795,6 +1803,7 @@
     <Content Include="Images\SliderImages\Mob4.jpg" />
     <Content Include="Images\SliderImages\Mob4.PNG" />
     <Content Include="Images\SliderImages\Mob5.jpg" />
+    <Content Include="Images\Support Image\Supportpic.jpg" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -1894,11 +1903,17 @@
     <Content Include="Icons\webfonts\fa-solid-900.ttf" />
     <Content Include="Icons\webfonts\fa-solid-900.woff" />
     <Content Include="Icons\webfonts\fa-solid-900.woff2" />
+    <Content Include="Fonts\AGENCYB.TTF" />
+    <Content Include="Fonts\AGENCYR.TTF" />
+    <Content Include="Fonts\Vermin Vibes 2 Nightclub.otf" />
+    <Content Include="Fonts\Vermin Vibes 4 Helium.otf" />
     <None Include="Scripts\jquery-3.0.0-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.9.1.js" />
     <Content Include="Scripts\jquery-3.0.0.js" />
     <Content Include="Scripts\jquery-3.0.0.min.js" />
     <Content Include="Scripts\jquery-3.0.0.slim.js" />
     <Content Include="Scripts\jquery-3.0.0.slim.min.js" />
+    <Content Include="Scripts\jquery-ui-1.10.3.custom.min.js" />
     <Content Include="Scripts\JS Files\Index.js" />
     <Content Include="Scripts\JS Files\Signin.js" />
     <Content Include="Scripts\JS Files\Signup.js" />
@@ -1991,6 +2006,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AccountsController.cs" />
     <Compile Include="Controllers\CartController.cs" />
+    <Compile Include="Controllers\CompareController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -2006,6 +2022,10 @@
     <Content Include="Views\Accounts\SignUp.cshtml" />
     <Content Include="Views\Cart\Index.cshtml" />
     <Content Include="Views\Home\Accessories.cshtml" />
+    <Content Include="Views\Compare\Smartphones.cshtml" />
+    <Content Include="Views\Compare\Tablets.cshtml" />
+    <Content Include="Views\Compare\Laptops.cshtml" />
+    <Content Include="Views\Home\Support.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

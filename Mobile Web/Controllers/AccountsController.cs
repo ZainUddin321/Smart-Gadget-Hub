@@ -7,10 +7,13 @@ using Mobile_Web.Models;
 using Mobile_Web.DB.DB_Operations;
 using Mobile_Web.DB;
 using System.Web.Security;
+using System.Data;
+using System.Data.SqlClient;
 namespace Mobile_Web.Controllers
 {
     public class AccountsController : Controller
     {
+        SqlConnection con = new SqlConnection(Connection.ConnectionString);
         UserRepository repo = null;
         public AccountsController()
         {
@@ -45,7 +48,23 @@ namespace Mobile_Web.Controllers
         {
             if (ModelState.IsValid)
             {
-                using (var context = new Mobile_WebEntities())
+                bool isUserNameAlreadyExists=false;
+                con.Open();
+                string query = "Select * from Users where username='" + userinfo.username +"'";
+                SqlDataAdapter data = new SqlDataAdapter(query, con);
+                DataTable dtable = new DataTable();
+                data.Fill(dtable);
+                if (dtable.Rows.Count >= 1)
+                {
+                    isUserNameAlreadyExists = true;
+                    if (isUserNameAlreadyExists)
+                    {
+                        ModelState.AddModelError("username", "Sorry username already taken, Try another.");
+                        con.Close();
+                        return View(userinfo);
+                    }
+                }
+                /*using (var context = new Mobile_WebEntities())
                 {
                     var isUserNameAlreadyExists = context.Users.Any(x => x.username == userinfo.username);
                     if(isUserNameAlreadyExists)
@@ -53,7 +72,8 @@ namespace Mobile_Web.Controllers
                         ModelState.AddModelError("username","Sorry username already taken, Try another.");
                         return View(userinfo);
                     }
-                };
+                };*/
+                con.Close();
                 string username = repo.createAccount(userinfo);
 
                 return RedirectToAction("SignIn");

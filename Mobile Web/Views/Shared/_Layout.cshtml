@@ -12,42 +12,10 @@
     <meta name="viewport" content="width=device-width" />
     <link rel="stylesheet" href="~/Content/Style.css" />
     <link href="~/Icons/css/all.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-3.0.0.min.js"></script>
     <title>Z-TECH</title>
 </head>
 <body>
-    <!--<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="staticBackdropLabel">Sign in now</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <form>
-                    <div class="modal-body">
-
-                        <div class="mb-3">
-                            <label for="exampleInputUsername" class="form-label">Username</label>
-                            <input type="text" class="form-control" id="exampleInputUsername" />
-                        </div>
-                        <div class="mb-3">
-                            <label for="exampleInputPassword1" class="form-label">Password</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1" aria-describedby="passwordHelpBlock">
-                            <div id="passwordHelpBlock" class="form-text">
-                                Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.
-                            </div>
-                        </div>
-                        <div class="text-black-50 mt-1"><p>Don't have any account? <u>Create account now.</u></p></div>
-
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-primary">Submit</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-    -->
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
@@ -64,16 +32,16 @@
                             <a class="nav-link" href="~/Home/Accessories">Accessories</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Support</a>
+                            <a class="nav-link" href="~/Home/Support">Support</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Dropdown link
+                                Compare Specs
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                <li ><a class="dropdown-item compare-list" href="~/Compare/Smartphones">Smartphones</a></li>
+                                <li ><a class="dropdown-item compare-list" href="~/Compare/Laptops">Laptops</a></li>
+                                <li ><a class="dropdown-item compare-list" href="~/Compare/Tablets">Tablets</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -210,7 +178,6 @@
     @RenderSection("signupjs", required: false)
     @RenderSection("signinjs", required: false)
     <script src="~/Bootstrap/js/bootstrap.min.js"></script>
-    <script src="~/Scripts/jquery-3.0.0.min.js"></script>
 
 </body>
 </html>

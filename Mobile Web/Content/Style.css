@@ -2,6 +2,9 @@
     margin: 0px;
     padding: 0px;
 }
+body {
+    background-color: rgb(240, 238, 235);
+}
 html{
     scroll-behavior: smooth;
 }
@@ -393,7 +396,7 @@ header
 
 
 .s1-accessories .fa, .s2-accessories .fa, .s3-accessories .fa {
-    color: #FF5722
+    color: #FF5722;
 }
 /*Cart Section*/
 .cimg {
@@ -418,4 +421,114 @@ header
     padding: 10px;
     background-color: rgba(255, 204, 204, 0.6);
     border: 1px solid red;
+}
+.compare-list:hover {
+    background-color: rgb(177, 232, 252);
+}
+.smartphone-section {
+    background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%);
+    padding-top: 3.5%;
+    padding-bottom: 5%;
+}
+.tablets-section {
+    background: linear-gradient(90deg, #00d2ff 0%, #3a47d5 100%);
+    padding-top: 3.5%;
+    padding-bottom: 5%;
+}
+.laptops-section {
+    background: linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%);
+    padding-top: 3.5%;
+    padding-bottom: 5%;
+}
+.compare-box {
+    background-color: rgba(249, 249, 249, 0.8);
+    border-radius: 10px;
+    padding: 5px;
+    margin-right: 5px;
+    margin-top: 5px
+}
+
+.mobimg {
+    border-radius: 10px;
+}
+
+@font-face {
+    font-family: 'verminnight';
+    src: url('/Fonts/Vermin Vibes 2 Nightclub.otf');
+}
+
+@font-face {
+    font-family: 'AgencyFb';
+    src: url(/Fonts/AGENCYR.TTF);
+}
+.hd {
+    font-family: verminnight;
+    text-align: center;
+    font-weight: bold;
+}
+
+.spec {
+    font-family: AgencyFb;
+    font-size: large;
+}
+
+
+.banner {
+    position: relative;
+    text-align: center;
+    margin: 0%;
+    padding: 0%;
+}
+.banner img {
+    width: 100%;
+    height: auto;
+    transform: scale(1, 1);
+    margin: 0%;
+    padding: 0%;
+}
+
+#welcome-txt {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.SupportParent {
+    background-color: rgb(240, 238, 235);
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 125px;
+}
+
+.SupportBox {
+    background-color: white;
+    border-radius: 4px;
+    text-align: center;
+    margin: 8px;
+    padding: 20px;
+    width: 300px;
+    cursor: pointer;
+    box-shadow: 0 0 0 0 rgb(88, 85, 85);
+    transition-property: margin-top,bpxshadow;
+    transition-duration: 0.3s;
+}
+
+.SupportBox p {
+    font-size: 20px;
+}
+.SupportBox:hover {
+    margin-top: 11px;
+    box-shadow: 2px 2px 15px rgb(88, 85, 85);
+}
+
+.ContactParent {
+    background-color: white;
+}
+
+.ContactBox {
+    text-align: center;
+    background-color: rgb(240, 238, 235);
+    box-shadow: 1px 1px 15px rgb(88, 85, 85);
+    margin: 8px;
 }

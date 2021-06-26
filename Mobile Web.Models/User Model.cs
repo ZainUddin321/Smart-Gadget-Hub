@@ -8,6 +8,7 @@ namespace Mobile_Web.Models
 {
     public class User_Model
     {
+        public int U_id { get; set; }
         [Required]
         public string username { get; set; }
         [Required]

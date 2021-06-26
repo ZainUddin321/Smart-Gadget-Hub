@@ -1,0 +1,210 @@
+﻿
+@{
+    ViewBag.Title = "Laptops";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/Content/jquery-ui-1.10.4.custom.min.css" rel="stylesheet" />
+<script src="~/Scripts/jquery-1.9.1.js"></script>
+<script src="~/Scripts/jquery-ui-1.10.3.custom.min.js"></script>
+<!--<script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="https://ajax.aspnetcdn.com/ajax/jquery.ui/1.10.3/jquery-ui.min.js"></script>
+
+<script src="~/Scripts/jquery-1.10.2.js"></script>
+<script src="~/Scripts/jquery-ui-1.10.4.custom.min.js"></script>-->
+<script type="text/javascript">
+    $(function () {
+        $("#txtSearch1").autocomplete({
+            source: '@Url.Action("GetLaptopsSearch", "Compare")'
+        });
+    });
+    $(function () {
+        $("#txtSearch2").autocomplete({
+            source: '@Url.Action("GetLaptopsSearch", "Compare")'
+        });
+    });
+    function btnClick(searchBtn) {
+        if (searchBtn == 1) {
+            var searchstring = $("#txtSearch1").val();
+        }
+        else if (searchBtn == 2) {
+            var searchstring = $("#txtSearch2").val();
+        }
+        if (searchstring != '') {
+            var obj = {
+                pname: searchstring,
+                ptype: "Laptops"
+            }
+            SubmitForm(obj, searchBtn);
+        }
+    }
+    function SubmitForm(obj,searchBtn) {
+        $.ajax({
+            url: "/Compare/getPname",
+            method: "POST",
+            data: obj,
+            success: function (data) {
+                $("#pname" + searchBtn.toString()).text(data.pname);
+                $("#image" + searchBtn.toString()).attr("src", data.image);
+                $("#Chipset" + searchBtn.toString()).text(data.Chipset);
+                $("#Memory" + searchBtn.toString()).text(data.Memory);
+                $("#Size" + searchBtn.toString()).text(data.Size);
+                $("#Battery" + searchBtn.toString()).text(data.Battery);
+                $("#OS" + searchBtn.toString()).text(data.OS);
+                $("#Weight" + searchBtn.toString()).text(data.Weight);
+                $("#price" + searchBtn.toString()).text("$"+data.price);
+                console.log(data);
+            },
+            error: function (err) {
+                console.error(err);
+            }
+        })
+    }
+</script>
+<section class="laptops-section">
+    <div class="container justify-content-center">
+        <div class="row justify-content-center">
+            <div class="col-2"></div>
+            <div class="col-8">
+                <center><h1 class="pb-4" style="color:white;font-family: verminnight;">Compare Laptops</h1></center>
+            </div>
+        </div>
+        <div class='row justify-content-center'>
+
+            <div class="col-2">
+
+            </div>
+            <div class="col-4 compare-box">
+                <div class="input-group rounded">
+                    <input type="search" id="txtSearch1" class="form-control rounded" placeholder="Compare with" aria-label="Search"
+                           aria-describedby="search-addon" />
+                    <span class="input-group-text border-0" id="search-addon">
+                        <button type="button" onclick="btnClick(1)" class="btn btn-light"><i class="fas fa-search"></i></button>
+                    </span>
+                </div>
+            </div>
+            <div class="col-4 compare-box">
+                <div class="input-group rounded">
+                    <input type="search" id="txtSearch2" class="form-control rounded" placeholder="Compare with" aria-label="Search"
+                           aria-describedby="search-addon" />
+                    <span class="input-group-text border-0" id="search-addon">
+                        <button type="button" onclick="btnClick(2)" class="btn btn-light"><i class="fas fa-search"></i></button>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div class='row justify-content-center'>
+
+            <div class="col-2">
+
+            </div>
+            <div class="col-4 compare-box">
+                <h3 id="pname1" class="hd">Dell Latitude</h3>
+            </div>
+            <div class="col-4 compare-box">
+                <h3 id="pname2" class="hd">Lenovo Ideapad</h3>
+            </div>
+        </div>
+        <div class='row justify-content-center'>
+
+            <div class="col-2 ">
+            </div>
+            <div class="col-4 compare-box">
+                <img id="image1" src="~/Images/Products/laptop1.jpg" class="mobimg img-fluid img-thumbnail" alt="...">
+            </div>
+            <div class="col-4 compare-box">
+                <img id="image2" src="~/Images/Products/laptop2.jpg" class="mobimg img-fluid img-thumbnail" alt="...">
+            </div>
+        </div>
+        <div class='row justify-content-center'>
+
+            <div class="col-2 compare-box">
+
+                <p class="spec" style="font-weight: bold; text-align: center;">Processor</p>
+            </div>
+            <div class="col-4 compare-box">
+                <p id="Chipset1" class="spec">Intel Core i5 3rd Gen 3210M</p>
+            </div>
+            <div class="col-4 compare-box">
+                <p id="Chipset2" class="spec">Intel Core Intel 5th Gen 5005U</p>
+            </div>
+        </div>
+        <div class='row justify-content-center'>
+
+            <div class="col-2 compare-box">
+
+                <p class="spec" style="font-weight: bold; text-align: center;">Memory</p>
+            </div>
+            <div class="col-4 compare-box">
+                <p id="Memory1" class="spec">320GB (Built-In), 4GB</p>
+            </div>
+            <div class="col-4 compare-box">
+                <p id="Memory2" class="spec">1TB (Built-In), 8GB</p>
+            </div>
+        </div>
+        <div class='row justify-content-center'>
+
+            <div class="col-2 compare-box">
+
+                <p class="spec" style="font-weight: bold; text-align: center;">Display size</p>
+            </div>
+            <div class="col-4 compare-box">
+                <p id="Size1" class="spec">14.00-inch</p>
+            </div>
+            <div class="col-4 compare-box">
+                <p id="Size2" class="spec">15.60-inch</p>
+            </div>
+        </div>
+        <div class='row justify-content-center'>
+
+            <div class="col-2 compare-box">
+                <p class="spec" style="font-weight: bold; text-align: center;">Operating System</p>
+            </div>
+            <div class="col-4 compare-box">
+                <p id="OS1" class="spec">Windows 7</p>
+            </div>
+            <div class="col-4 compare-box">
+                <p id="OS2" class="spec">Windows 10 Home</p>
+            </div>
+        </div>
+        <div class='row justify-content-center'>
+
+            <div class="col-2 compare-box">
+                <p class="spec" style="font-weight: bold; text-align: center;">Weight</p>
+            </div>
+            <div class="col-4 compare-box">
+                <p id="Weight1" class="spec">2.10 kg</p>
+            </div>
+            <div class="col-4 compare-box">
+                <p id="Weight2" class="spec">2.3 kg</p>
+            </div>
+        </div>
+        <div class='row justify-content-center'>
+
+            <div class="col-2 compare-box">
+                <p class="spec" style="font-weight: bold; text-align: center;">Battery</p>
+            </div>
+            <div class="col-4 compare-box">
+                <p id="Battery1" class="spec">5225 mAh / 58 Wh;</p>
+            </div>
+            <div class="col-4 compare-box">
+                <p id="Battery2" class="spec">2200mAh / 14.8V;</p>
+            </div>
+        </div>
+        <div class='row justify-content-center'>
+
+            <div class="col-2 compare-box">
+                <p class="spec" style="font-weight: bold; text-align: center; color:rgb(0, 170, 232)">Price</p>
+            </div>
+            <div class="col-4 compare-box">
+                <p id="price1" class="spec">$344</p>
+            </div>
+            <div class="col-4 compare-box">
+                <p id="price2" class="spec">$996 </p>
+            </div>
+        </div>
+
+
+    </div>
+</section>
+
