@@ -1793,6 +1793,9 @@
     <Content Include="Images\Products\Mobile1.png" />
     <Content Include="Images\Products\Mobile2.jpg" />
     <Content Include="Images\Products\Mobile3.png" />
+    <Content Include="Images\Products\Mobile4.png" />
+    <Content Include="Images\Products\Mobile5.png" />
+    <Content Include="Images\Products\Mobile6.png" />
     <Content Include="Images\Products\Tab1.jpeg" />
     <Content Include="Images\Products\Tab2.jpg" />
     <Content Include="Images\Products\Tab3.jpg" />
@@ -1915,6 +1918,7 @@
     <Content Include="Scripts\jquery-3.0.0.slim.min.js" />
     <Content Include="Scripts\jquery-ui-1.10.3.custom.min.js" />
     <Content Include="Scripts\JS Files\Index.js" />
+    <Content Include="Scripts\JS Files\Order.js" />
     <Content Include="Scripts\JS Files\Signin.js" />
     <Content Include="Scripts\JS Files\Signup.js" />
     <Content Include="Scripts\popper-utils.js" />
@@ -2020,12 +2024,12 @@
     <Content Include="Scripts\jquery-3.0.0.min.map" />
     <Content Include="Views\Accounts\SignIn.cshtml" />
     <Content Include="Views\Accounts\SignUp.cshtml" />
-    <Content Include="Views\Cart\Index.cshtml" />
     <Content Include="Views\Home\Accessories.cshtml" />
     <Content Include="Views\Compare\Smartphones.cshtml" />
     <Content Include="Views\Compare\Tablets.cshtml" />
     <Content Include="Views\Compare\Laptops.cshtml" />
     <Content Include="Views\Home\Support.cshtml" />
+    <Content Include="Views\Cart\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

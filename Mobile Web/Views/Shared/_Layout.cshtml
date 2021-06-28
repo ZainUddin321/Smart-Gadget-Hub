@@ -19,7 +19,7 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
-                <a class="navbar-brand d-flex w-50 mr-auto" href="~/Home/Index"><img width="146px" height="35px" src="~/Images/Logo/Z-Tech Logo1.png"/></a>
+                <a class="navbar-brand d-flex w-50 mr-auto" href="~/Home/Index"><img width="146px" height="35px" src="~/Images/Logo/Z-Tech Logo1.png" /></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -39,9 +39,9 @@
                                 Compare Specs
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <li ><a class="dropdown-item compare-list" href="~/Compare/Smartphones">Smartphones</a></li>
-                                <li ><a class="dropdown-item compare-list" href="~/Compare/Laptops">Laptops</a></li>
-                                <li ><a class="dropdown-item compare-list" href="~/Compare/Tablets">Tablets</a></li>
+                                <li><a class="dropdown-item compare-list" href="~/Compare/Smartphones">Smartphones</a></li>
+                                <li><a class="dropdown-item compare-list" href="~/Compare/Laptops">Laptops</a></li>
+                                <li><a class="dropdown-item compare-list" href="~/Compare/Tablets">Tablets</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -49,18 +49,18 @@
                         <li class="nav-item">
                             <a class="nav-link" href="~/Cart/Index"><i class="fas fa-shopping-cart" style="color:white"></i> Carts</a>
                         </li>
-                       @if (User.Identity.IsAuthenticated)
+                        @if (User.Identity.IsAuthenticated)
                         {
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <i class="fas fa-user" style="color:white"></i> @User.Identity.Name
-                            </a>
-                            <ul class="signoutdrop dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <li>
-                                    <a class="dropdown-item" href="~/Accounts/SignOut">Sign Out</a>
-                                </li>
-                            </ul>
-                        </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="fas fa-user" style="color:white"></i> @User.Identity.Name
+                                </a>
+                                <ul class="signoutdrop dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <li>
+                                        <a class="dropdown-item" href="~/Accounts/SignOut">Sign Out</a>
+                                    </li>
+                                </ul>
+                            </li>
                         }
                         else
                         {
@@ -177,7 +177,7 @@
     @RenderSection("jsfile", required: false)
     @RenderSection("signupjs", required: false)
     @RenderSection("signinjs", required: false)
+    @RenderSection("Orderjs",required:false)
     <script src="~/Bootstrap/js/bootstrap.min.js"></script>
-
 </body>
 </html>

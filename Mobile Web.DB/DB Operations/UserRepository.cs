@@ -11,6 +11,8 @@ namespace Mobile_Web.DB.DB_Operations
     public class UserRepository
     {
         public static int userid=0;
+        public static string username = "";
+        public static string email = "";
         SqlConnection con = new SqlConnection(Connection.ConnectionString);
         public string createAccount(User_Model model)
         {
@@ -46,6 +48,8 @@ namespace Mobile_Web.DB.DB_Operations
             if (dtable.Rows.Count == 1)
             {
                 userid = Convert.ToInt32(dtable.Rows[0]["U_id"]);
+                username = dtable.Rows[0]["username"].ToString();
+                email= dtable.Rows[0]["email"].ToString();
                 return true;
             }
             else

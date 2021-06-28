@@ -20,25 +20,25 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>07/25/2012 11:48:56</publishTime>
     </File>
     <File Include="bin/Mobile Web.DB.dll">
-      <publishTime>02/13/2021 14:14:03</publishTime>
+      <publishTime>06/26/2021 15:46:11</publishTime>
     </File>
     <File Include="bin/Mobile Web.DB.dll.config">
-      <publishTime>02/08/2021 14:36:22</publishTime>
+      <publishTime>05/18/2021 22:24:17</publishTime>
     </File>
     <File Include="bin/Mobile Web.DB.pdb">
-      <publishTime>02/13/2021 14:14:03</publishTime>
+      <publishTime>06/26/2021 15:46:11</publishTime>
     </File>
     <File Include="bin/Mobile Web.dll">
-      <publishTime>02/13/2021 14:14:08</publishTime>
+      <publishTime>06/26/2021 16:38:13</publishTime>
     </File>
     <File Include="bin/Mobile Web.Models.dll">
-      <publishTime>02/13/2021 14:14:02</publishTime>
+      <publishTime>06/24/2021 15:41:50</publishTime>
     </File>
     <File Include="bin/Mobile Web.Models.pdb">
-      <publishTime>02/13/2021 14:14:02</publishTime>
+      <publishTime>06/24/2021 15:41:50</publishTime>
     </File>
     <File Include="bin/Mobile Web.pdb">
-      <publishTime>02/13/2021 14:14:08</publishTime>
+      <publishTime>06/26/2021 16:38:13</publishTime>
     </File>
     <File Include="bin/roslyn/csc.exe">
       <publishTime>08/08/2018 05:38:48</publishTime>
@@ -373,8 +373,44 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
     <File Include="Content/bootstrap.min.css.map">
       <publishTime>01/24/2021 19:44:46</publishTime>
     </File>
+    <File Include="Content/images/animated-overlay.gif">
+      <publishTime>06/23/2021 12:31:03</publishTime>
+    </File>
+    <File Include="Content/images/ui-icons_444444_256x240.png">
+      <publishTime>06/23/2021 12:31:03</publishTime>
+    </File>
+    <File Include="Content/images/ui-icons_555555_256x240.png">
+      <publishTime>06/23/2021 12:31:03</publishTime>
+    </File>
+    <File Include="Content/images/ui-icons_777620_256x240.png">
+      <publishTime>06/23/2021 12:31:03</publishTime>
+    </File>
+    <File Include="Content/images/ui-icons_777777_256x240.png">
+      <publishTime>06/23/2021 12:31:03</publishTime>
+    </File>
+    <File Include="Content/images/ui-icons_cc0000_256x240.png">
+      <publishTime>06/23/2021 12:31:03</publishTime>
+    </File>
+    <File Include="Content/images/ui-icons_ffffff_256x240.png">
+      <publishTime>06/23/2021 12:31:03</publishTime>
+    </File>
+    <File Include="Content/jquery-ui-1.10.4.custom.min.css">
+      <publishTime>06/23/2021 12:31:02</publishTime>
+    </File>
     <File Include="Content/Style.css">
-      <publishTime>02/11/2021 17:09:40</publishTime>
+      <publishTime>06/25/2021 02:47:55</publishTime>
+    </File>
+    <File Include="Fonts/AGENCYB.TTF">
+      <publishTime>01/17/2021 02:32:36</publishTime>
+    </File>
+    <File Include="Fonts/AGENCYR.TTF">
+      <publishTime>01/17/2021 02:32:36</publishTime>
+    </File>
+    <File Include="Fonts/Vermin Vibes 2 Nightclub.otf">
+      <publishTime>12/13/2013 14:09:34</publishTime>
+    </File>
+    <File Include="Fonts/Vermin Vibes 4 Helium.otf">
+      <publishTime>03/04/2016 10:39:22</publishTime>
     </File>
     <File Include="Global.asax">
       <publishTime>01/24/2021 19:43:54</publishTime>
@@ -5515,6 +5551,15 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
     <File Include="Images/Products/Mobile3.png">
       <publishTime>02/08/2021 18:09:44</publishTime>
     </File>
+    <File Include="Images/Products/Mobile4.png">
+      <publishTime>06/24/2021 16:35:30</publishTime>
+    </File>
+    <File Include="Images/Products/Mobile5.png">
+      <publishTime>06/24/2021 16:48:46</publishTime>
+    </File>
+    <File Include="Images/Products/Mobile6.png">
+      <publishTime>06/24/2021 16:54:12</publishTime>
+    </File>
     <File Include="Images/Products/Tab1.jpeg">
       <publishTime>02/08/2021 18:58:26</publishTime>
     </File>
@@ -5544,6 +5589,9 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
     </File>
     <File Include="Images/SliderImages/Mob5.jpg">
       <publishTime>02/03/2021 00:05:01</publishTime>
+    </File>
+    <File Include="Images/Support Image/Supportpic.jpg">
+      <publishTime>06/24/2021 17:25:06</publishTime>
     </File>
     <File Include="Scripts/bootstrap.bundle.js">
       <publishTime>01/24/2021 19:44:46</publishTime>
@@ -5596,6 +5644,9 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
     <File Include="Scripts/index.js.flow">
       <publishTime>01/24/2021 19:44:43</publishTime>
     </File>
+    <File Include="Scripts/jquery-1.9.1.js">
+      <publishTime>06/23/2021 13:16:32</publishTime>
+    </File>
     <File Include="Scripts/jquery-3.0.0.js">
       <publishTime>01/24/2021 19:44:38</publishTime>
     </File>
@@ -5613,6 +5664,9 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
     </File>
     <File Include="Scripts/jquery-3.0.0.slim.min.map">
       <publishTime>01/24/2021 19:44:37</publishTime>
+    </File>
+    <File Include="Scripts/jquery-ui-1.10.3.custom.min.js">
+      <publishTime>06/23/2021 13:16:32</publishTime>
     </File>
     <File Include="Scripts/JS Files/Index.js">
       <publishTime>02/02/2021 18:47:34</publishTime>
@@ -5873,22 +5927,34 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>02/05/2021 16:19:38</publishTime>
     </File>
     <File Include="Views/Cart/Index.cshtml">
-      <publishTime>02/11/2021 17:38:24</publishTime>
+      <publishTime>06/21/2021 18:47:00</publishTime>
+    </File>
+    <File Include="Views/Compare/Laptops.cshtml">
+      <publishTime>06/24/2021 17:07:27</publishTime>
+    </File>
+    <File Include="Views/Compare/Smartphones.cshtml">
+      <publishTime>06/24/2021 01:54:13</publishTime>
+    </File>
+    <File Include="Views/Compare/Tablets.cshtml">
+      <publishTime>06/24/2021 02:12:53</publishTime>
     </File>
     <File Include="Views/Home/Accessories.cshtml">
-      <publishTime>02/11/2021 15:57:52</publishTime>
+      <publishTime>06/21/2021 21:43:54</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
       <publishTime>02/03/2021 18:05:24</publishTime>
     </File>
+    <File Include="Views/Home/Support.cshtml">
+      <publishTime>06/26/2021 15:46:09</publishTime>
+    </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>02/11/2021 18:09:58</publishTime>
+      <publishTime>06/25/2021 02:40:36</publishTime>
     </File>
     <File Include="Views/web.config">
       <publishTime>02/04/2021 16:33:58</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>02/13/2021 14:14:10</publishTime>
+      <publishTime>06/26/2021 16:32:34</publishTime>
     </File>
   </ItemGroup>
 </Project>

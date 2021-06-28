@@ -1,0 +1,201 @@
+﻿@model Mobile_Web.Models.Product_Model
+@{
+    ViewBag.Title = "Smartphones";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/Content/jquery-ui-1.10.4.custom.min.css" rel="stylesheet" />
+<script src="~/Scripts/jquery-1.9.1.js"></script>
+<script src="~/Scripts/jquery-ui-1.10.3.custom.min.js"></script>
+<!--<script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="https://ajax.aspnetcdn.com/ajax/jquery.ui/1.10.3/jquery-ui.min.js"></script>
+
+<script src="~/Scripts/jquery-1.10.2.js"></script>
+<script src="~/Scripts/jquery-ui-1.10.4.custom.min.js"></script>-->
+<script type="text/javascript">
+    $(function () {
+        $("#txtSearch1").autocomplete({
+            source: '@Url.Action("GetSmartphonesSearch", "Compare")'
+        });
+    });
+    $(function () {
+        $("#txtSearch2").autocomplete({
+            source: '@Url.Action("GetSmartphonesSearch", "Compare")'
+        });
+    });
+    function btnClick(searchBtn) {
+        if (searchBtn == 1) {
+            var searchstring = $("#txtSearch1").val();
+        }
+        else if (searchBtn == 2) {
+            var searchstring = $("#txtSearch2").val();
+        }
+        if (searchstring != '') {
+            var obj = {
+                pname: searchstring,
+                ptype: "Smartphones"
+            }
+            SubmitForm(obj, searchBtn);
+        }
+    }
+    function SubmitForm(obj,searchBtn) {
+        $.ajax({
+            url: "/Compare/getPname",
+            method: "POST",
+            data: obj,
+            success: function (data) {
+                $("#pname" + searchBtn.toString()).text(data.pname);
+                $("#image" + searchBtn.toString()).attr("src", data.image);
+                $("#Chipset" + searchBtn.toString()).text(data.Chipset);
+                $("#Memory" + searchBtn.toString()).text(data.Memory);
+                $("#Size" + searchBtn.toString()).text(data.Size);
+                $("#MainCamera" + searchBtn.toString()).text(data.MainCamera);
+                $("#FrontCamera" + searchBtn.toString()).text(data.FrontCamera);
+                $("#Battery" + searchBtn.toString()).text(data.Battery);
+                $("#price" + searchBtn.toString()).text("$"+data.price);
+                console.log(data);
+            },
+            error: function (err) {
+                console.error(err);
+            }
+        })
+    }
+</script>
+<section class="smartphone-section">
+    <div class="container justify-content-center">
+        <div class="row justify-content-center">
+            <div class="col-2"></div>
+            <div class="col-8">
+                <center><h1 class="pb-4" style="color:white;font-family: verminnight;">Compare Smartphones</h1></center>
+            </div>
+        </div>
+        <div class='row justify-content-center'>
+
+            <div class="col-2">
+
+            </div>
+            <div class="col-4 compare-box">
+                <div class="input-group rounded">
+                    <input type="search" id="txtSearch1" class="form-control rounded" placeholder="Compare with" aria-label="Search"
+                           aria-describedby="search-addon" />
+                    <span class="input-group-text border-0" id="search-addon">
+                        <button type="button" onclick="btnClick(1)" class="btn btn-light"><i class="fas fa-search"></i></button>
+                    </span>
+                </div>
+            </div>
+            <div class="col-4 compare-box">
+                <div class="input-group rounded">
+                    <input type="search" id="txtSearch2" class="form-control rounded" placeholder="Compare with" aria-label="Search"
+                           aria-describedby="search-addon" />
+                    <span class="input-group-text border-0" id="search-addon">
+                        <button type="button" onclick="btnClick(2)" class="btn btn-light"><i class="fas fa-search"></i></button>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div class='row justify-content-center'>
+
+            <div class="col-2">
+
+            </div>
+            <div class="col-4 compare-box">
+                <h3 id="pname1" class="hd">Realme C15</h3>
+            </div>
+            <div class="col-4 compare-box">
+                <h3 id="pname2" class="hd">Samsung A70</h3>
+            </div>
+        </div>
+        <div class='row justify-content-center'>
+
+            <div class="col-2 ">
+            </div>
+            <div class="col-4 compare-box">
+                <img id="image1" src="~/Images/Products/Mobile1.png" class="mobimg img-fluid img-thumbnail" alt="...">
+            </div>
+            <div class="col-4 compare-box">
+                <img id="image2" src="~/Images/Products/Mobile2.jpg" class="mobimg img-fluid img-thumbnail" alt="...">
+            </div>
+        </div>
+        <div class='row justify-content-center'>
+
+            <div class="col-2 compare-box">
+
+                <p class="spec" style="font-weight: bold; text-align: center;">Chipset</p>
+            </div>
+            <div class="col-4 compare-box">
+                <p id="Chipset1" class="spec">Snapdragon 460</p>
+            </div>
+            <div class="col-4 compare-box">
+                <p id="Chipset2" class="spec">Qualcomm SDM675 Snapdragon 675 (11 nm)</p>
+            </div>
+        </div>
+        <div class='row justify-content-center'>
+
+            <div class="col-2 compare-box">
+
+                <p class="spec" style="font-weight: bold; text-align: center;">Memory</p>
+            </div>
+            <div class="col-4 compare-box">
+                <p id="Memory1" class="spec">64GB Built-in, 4GB RAM</p>
+            </div>
+            <div class="col-4 compare-box">
+                <p id="Memory2" class="spec">128GB Built-in, 6GB RAM </p>
+            </div>
+        </div>
+        <div class='row justify-content-center'>
+
+            <div class="col-2 compare-box">
+
+                <p class="spec" style="font-weight: bold; text-align: center;">Size</p>
+            </div>
+            <div class="col-4 compare-box">
+                <p id="Size1" class="spec">6.5 Inches</p>
+            </div>
+            <div class="col-4 compare-box">
+                <p id="Size2" class="spec">6.7 Inches</p>
+            </div>
+        </div>
+        <div class='row justify-content-center'>
+
+            <div class="col-2 compare-box">
+                <p class="spec" style="font-weight: bold; text-align: center;">Main Camera</p>
+                <p class="spec" style="font-weight: bold; text-align: center;">Front Camera</p>
+            </div>
+            <div class="col-4 compare-box">
+                <p id="MainCamera1" class="spec">Quad Camera: 13 MP, f/2.2, (wide)</p>
+                <p id="FrontCamera1" class="spec">8 MP, f/2.0, (wide), HDR, Video (1080p@30fps) </p>
+            </div>
+            <div class="col-4 compare-box">
+                <p id="MainCamera2" class="spec">Triple Camera: 32 MP, f/1.7, PDAF + 8 MP</p>
+                <p id="FrontCamera2" class="spec">32 MP, f/2.0, HDR, Video (1080p@30fps)  </p>
+            </div>
+        </div>
+        <div class='row justify-content-center'>
+
+            <div class="col-2 compare-box">
+                <p class="spec" style="font-weight: bold; text-align: center;">Battery</p>
+            </div>
+            <div class="col-4 compare-box">
+                <p id="Battery1" class="spec">(Li-Po Non removable), 6000 mAh  </p>
+            </div>
+            <div class="col-4 compare-box">
+                <p id="Battery2" class="spec">(Li-Po Non removable), 4500 mAh </p>
+            </div>
+        </div>
+        <div class='row justify-content-center'>
+
+            <div class="col-2 compare-box">
+                <p class="spec" style="font-weight: bold; text-align: center; color:rgb(0, 170, 232)">Price</p>
+            </div>
+            <div class="col-4 compare-box">
+                <p id="price1" class="spec">$145</p>
+            </div>
+            <div class="col-4 compare-box">
+                <p id="price2" class="spec">$329 </p>
+            </div>
+        </div>
+
+
+    </div>
+</section>
+
