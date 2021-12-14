@@ -55,6 +55,7 @@
     @if (Model.Rows.Count > 0)
     {
         int total_amount = 0;
+        double discount_amount=0;
         <div class="container">
             <div class="cart-box p-0 pb-0 mb-2">
                 <div class="row text-center">
@@ -70,6 +71,7 @@
         </div>
         for (int i = 0; i < Model.Rows.Count; i++)
         {
+            double discountPrice = 0;
             <div class="container mb-4">
                 <div class="cart-box">
                     <div class="row text-center">
@@ -81,19 +83,30 @@
                             <p class="text-black-50">@Model.Rows[i]["ptype"].ToString()</p>
                             <p class="text-primary"><span class="text-black-50">Purchasing Plan</span>: @Model.Rows[i]["payment_method"].ToString()</p>
                         </div>
+                        @if(!Convert.IsDBNull(Model.Rows[i]["Discount"]))
+                        {
+                                discountPrice= (Int32.Parse(Model.Rows[i]["price"].ToString()) - (Int32.Parse(Model.Rows[i]["price"].ToString()) * Int32.Parse(Model.Rows[i]["Discount"].ToString()))/ 100);
+                        <div class="col-md-3 text-primary pt-md-4"> <s>$@Model.Rows[i]["price"].ToString()</s> <h1>$@discountPrice</h1> </div>
+                        }
+                        else
+                        {
+                            discountPrice = Int32.Parse(Model.Rows[i]["price"].ToString());
                         <div class="col-md-3 text-primary pt-md-4"> <h1>$@Model.Rows[i]["price"].ToString()</h1> </div>
+                        }
+
                         <div class="col-md-3 pt-md-4 mt-2">
                             <a class="btn btn-outline-danger" href="@Url.Action("deleteCart", "Cart", new { id = @Model.Rows[i]["C_id"].ToString() })"> <i class="far fa-trash-alt"></i> </a>
                         </div>
                     </div>
                 </div>
             </div>
+            discount_amount = discount_amount + discountPrice;
             total_amount = total_amount + Int32.Parse(@Model.Rows[i]["price"].ToString());
         }
         <div class="container">
             <div class="cart-box p-1 mb-2">
                 <div class="row text-center">
-                    <div class="col-md-6 mt-1"> <h4>Total Amount:<span class="text-primary"> $@total_amount</span></h4> </div>
+                    <div class="col-md-6 mt-1"> <h4>Total Amount:<span class="text-primary"> <s>$@total_amount</s> $@discount_amount</span></h4> </div>
                     <div class="col-md-6">
                         <button type="button" class="btn btn-primary rounded-pill px-4" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                             Order Now

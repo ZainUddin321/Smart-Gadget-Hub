@@ -20,16 +20,16 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>07/25/2012 11:48:56</publishTime>
     </File>
     <File Include="bin/Mobile Web.DB.dll">
-      <publishTime>06/26/2021 15:46:11</publishTime>
+      <publishTime>06/28/2021 23:16:07</publishTime>
     </File>
     <File Include="bin/Mobile Web.DB.dll.config">
       <publishTime>05/18/2021 22:24:17</publishTime>
     </File>
     <File Include="bin/Mobile Web.DB.pdb">
-      <publishTime>06/26/2021 15:46:11</publishTime>
+      <publishTime>06/28/2021 23:16:07</publishTime>
     </File>
     <File Include="bin/Mobile Web.dll">
-      <publishTime>06/26/2021 16:38:13</publishTime>
+      <publishTime>06/28/2021 23:16:11</publishTime>
     </File>
     <File Include="bin/Mobile Web.Models.dll">
       <publishTime>06/24/2021 15:41:50</publishTime>
@@ -38,7 +38,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>06/24/2021 15:41:50</publishTime>
     </File>
     <File Include="bin/Mobile Web.pdb">
-      <publishTime>06/26/2021 16:38:13</publishTime>
+      <publishTime>06/28/2021 23:16:11</publishTime>
     </File>
     <File Include="bin/roslyn/csc.exe">
       <publishTime>08/08/2018 05:38:48</publishTime>
@@ -398,7 +398,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>06/23/2021 12:31:02</publishTime>
     </File>
     <File Include="Content/Style.css">
-      <publishTime>06/25/2021 02:47:55</publishTime>
+      <publishTime>06/28/2021 14:42:51</publishTime>
     </File>
     <File Include="Fonts/AGENCYB.TTF">
       <publishTime>01/17/2021 02:32:36</publishTime>
@@ -5671,6 +5671,9 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
     <File Include="Scripts/JS Files/Index.js">
       <publishTime>02/02/2021 18:47:34</publishTime>
     </File>
+    <File Include="Scripts/JS Files/Order.js">
+      <publishTime>06/28/2021 22:47:45</publishTime>
+    </File>
     <File Include="Scripts/JS Files/Signin.js">
       <publishTime>02/04/2021 00:53:20</publishTime>
     </File>
@@ -5921,25 +5924,25 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>01/24/2021 19:44:39</publishTime>
     </File>
     <File Include="Views/Accounts/SignIn.cshtml">
-      <publishTime>02/04/2021 19:07:54</publishTime>
+      <publishTime>06/28/2021 13:10:09</publishTime>
     </File>
     <File Include="Views/Accounts/SignUp.cshtml">
       <publishTime>02/05/2021 16:19:38</publishTime>
     </File>
     <File Include="Views/Cart/Index.cshtml">
-      <publishTime>06/21/2021 18:47:00</publishTime>
+      <publishTime>06/28/2021 23:06:15</publishTime>
     </File>
     <File Include="Views/Compare/Laptops.cshtml">
       <publishTime>06/24/2021 17:07:27</publishTime>
     </File>
     <File Include="Views/Compare/Smartphones.cshtml">
-      <publishTime>06/24/2021 01:54:13</publishTime>
+      <publishTime>06/28/2021 23:14:18</publishTime>
     </File>
     <File Include="Views/Compare/Tablets.cshtml">
       <publishTime>06/24/2021 02:12:53</publishTime>
     </File>
     <File Include="Views/Home/Accessories.cshtml">
-      <publishTime>06/21/2021 21:43:54</publishTime>
+      <publishTime>06/28/2021 12:58:29</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
       <publishTime>02/03/2021 18:05:24</publishTime>
@@ -5948,7 +5951,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>06/26/2021 15:46:09</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>06/25/2021 02:40:36</publishTime>
+      <publishTime>06/28/2021 19:14:44</publishTime>
     </File>
     <File Include="Views/web.config">
       <publishTime>02/04/2021 16:33:58</publishTime>

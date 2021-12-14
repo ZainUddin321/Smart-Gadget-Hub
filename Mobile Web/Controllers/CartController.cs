@@ -25,7 +25,7 @@ namespace Mobile_Web.Controllers
             ViewBag.username = UserRepository.username;
             ViewBag.email = UserRepository.email;
             con.Open();
-            string query = "select C_id,username,email,pname,ptype,price,payment_method,image,rating from Carts as c"
+            string query = "select C_id,username,email,pname,ptype,price,payment_method,image,rating,Discount from Carts as c"
                            + " inner join Products as p on c.P_id = p.P_id"
                            + " inner join Users as u on c.U_id=u.U_id"
                            +" where c.U_id = '"+ UserRepository.userid + "'";
