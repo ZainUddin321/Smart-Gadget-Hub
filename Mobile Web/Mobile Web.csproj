@@ -1785,6 +1785,7 @@
     <Content Include="Global.asax" />
     <Content Include="Images\Index Images\Phone.png" />
     <Content Include="Images\Index Images\Phone1.PNG" />
+    <Content Include="Images\Logo\ESTARTUP Logo.png" />
     <Content Include="Images\Logo\Z-Tech Logo.png" />
     <Content Include="Images\Logo\Z-Tech Logo1.png" />
     <Content Include="Images\Products\laptop1.jpg" />
@@ -1910,6 +1911,7 @@
     <Content Include="Fonts\AGENCYR.TTF" />
     <Content Include="Fonts\Vermin Vibes 2 Nightclub.otf" />
     <Content Include="Fonts\Vermin Vibes 4 Helium.otf" />
+    <Content Include="EstartupDatabase.bak" />
     <None Include="Scripts\jquery-3.0.0-vsdoc.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />
     <Content Include="Scripts\jquery-3.0.0.js" />

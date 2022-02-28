@@ -487,12 +487,12 @@ header
 
 @font-face {
     font-family: 'verminnight';
-    src: url("~/Fonts/Vermin Vibes 2 Nightclub.otf");
+    src: url("/Fonts/Vermin Vibes 2 Nightclub.otf");
 }
 
 @font-face {
     font-family: 'AgencyFb';
-    src: url("~/Fonts/AGENCYR.TTF");
+    src: url("/Fonts/AGENCYR.TTF");
 }
 .hd {
     font-family: verminnight;

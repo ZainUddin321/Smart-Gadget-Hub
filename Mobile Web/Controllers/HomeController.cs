@@ -59,9 +59,9 @@ namespace Mobile_Web.Controllers
         {
                 if (ModelState.IsValid)
                 {
-                    var senderEmail = new MailAddress("estartup@gmail.com",name);
-                    var receiverEmail = new MailAddress("estartup@gmail.com", "EStartUp");
-                    var password = "PasswordHere";
+                    var senderEmail = new MailAddress("csdsubmission1@gmail.com", name);
+                    var receiverEmail = new MailAddress("csdsubmission1@gmail.com","Z-TECH");
+                    var password = "samsunga52020";
                     var sub = subject;
                     var body = message;
                     var smtp = new SmtpClient

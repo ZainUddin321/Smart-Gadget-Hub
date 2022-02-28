@@ -22,11 +22,28 @@
         <div class="row">
             @for (int i = 0; i < Model.Smartphones.Rows.Count; i++)
             {
+            float discountPrice=0;
             <div class="col-lg-4">
                 <div class="container d-flex justify-content-center">
                     <figure class="card card-product-grid card-lg">
+                        
+                        @if (!Convert.IsDBNull(Model.Smartphones.Rows[i]["Discount"]))
+                        {
+                            if (Convert.ToInt32(Model.Smartphones.Rows[i]["Discount"]) != null)
+                            {
+                                discountPrice = Model.Smartphones.Rows[i]["price"]-(Model.Smartphones.Rows[i]["price"] * Model.Smartphones.Rows[i]["Discount"]) / 100;
+                                <div id="content" class="ms-auto">
+                                    <div class="discount-label red"> <span>-@Model.Smartphones.Rows[i]["Discount"].ToString()%</span> </div>
+
+                                </div>
+                            }
+                        }
+                        else
+                        {
+                            discountPrice = 0;
+                        }
                         <a href="#" class="img-wrap" data-abc="true">
-                            <img src="@Model.Smartphones.Rows[i]["image"].ToString()">
+                            <img src="@Model.Smartphones.Rows[i]["image"].ToString()">                           
                         </a>
                         <figcaption class="info-wrap">
                             <div class="row">
@@ -39,10 +56,14 @@
                         <div class="bottom-wrap-payment">
                             <figcaption class="info-wrap">
                                 <div class="row">
-                                    <div class="col-md-9 col-xs-9"> <a href="#" class="title" data-abc="true">$@Model.Smartphones.Rows[i]["price"].ToString()</a> <span class="rated">@Model.Smartphones.Rows[i]["payment_method"].ToString()</span> </div>
-                                    <div class="col-md-3 col-xs-3">
-                                        <div class="rating text-right"> #### 8787 </div>
-                                    </div>
+                                    @if (discountPrice != 0)
+                                    {
+                                        <div class="col-md-9 col-xs-9"> <a href="#" class="title" data-abc="true"><s>$@Model.Smartphones.Rows[i]["price"]</s> $@discountPrice</a> <span class="rated">@Model.Smartphones.Rows[i]["payment_method"].ToString()</span> </div>
+                                    }
+                                    else
+                                    {
+                                        <div class="col-md-9 col-xs-9"> <a href="#" class="title" data-abc="true">$@Model.Smartphones.Rows[i]["price"]</a> <span class="rated">@Model.Smartphones.Rows[i]["payment_method"].ToString()</span> </div>
+                                    }
                                 </div>
                             </figcaption>
                         </div>
@@ -61,10 +82,26 @@
     <div class="container justify-content-center">
         <div class="row">
             @for (int i = 0; i < Model.Laptops.Rows.Count; i++)
-             {
+            {
+                float discountPrice = 0;
                 <div class="col-lg-4">
                     <div class="container d-flex justify-content-center">
                         <figure class="card card-product-grid card-lg">
+                            @if (!Convert.IsDBNull(Model.Laptops.Rows[i]["Discount"]))
+                            {
+                                if (Convert.ToInt32(Model.Laptops.Rows[i]["Discount"]) != null)
+                                {
+                                    discountPrice = Model.Laptops.Rows[i]["price"]-(Model.Laptops.Rows[i]["price"] * Model.Laptops.Rows[i]["Discount"]) / 100;
+                                    <div id="content" class="ms-auto">
+                                        <div class="discount-label red"> <span>-@Model.Laptops.Rows[i]["Discount"].ToString()%</span> </div>
+
+                                    </div>
+                                }
+                            }
+                            else
+                            {
+                                discountPrice = 0;
+                            }
                             <a href="#" class="img-wrap" data-abc="true">
                                 <img src="@Model.Laptops.Rows[i]["image"].ToString()">
                             </a>
@@ -79,10 +116,14 @@
                             <div class="bottom-wrap-payment">
                                 <figcaption class="info-wrap">
                                     <div class="row">
-                                        <div class="col-md-9 col-xs-9"> <a href="#" class="title" data-abc="true">$@Model.Laptops.Rows[i]["price"].ToString()</a> <span class="rated">@Model.Laptops.Rows[i]["payment_method"].ToString()</span> </div>
-                                        <div class="col-md-3 col-xs-3">
-                                            <div class="rating text-right"> #### 8787 </div>
-                                        </div>
+                                        @if (discountPrice != 0)
+                                        {
+                                            <div class="col-md-9 col-xs-9"> <a href="#" class="title" data-abc="true"><s>$@Model.Laptops.Rows[i]["price"]</s> $@discountPrice</a> <span class="rated">@Model.Laptops.Rows[i]["payment_method"].ToString()</span> </div>
+                                        }
+                                        else
+                                        {
+                                            <div class="col-md-9 col-xs-9"> <a href="#" class="title" data-abc="true">$@Model.Laptops.Rows[i]["price"]</a> <span class="rated">@Model.Laptops.Rows[i]["payment_method"].ToString()</span> </div>
+                                        }
                                     </div>
                                 </figcaption>
                             </div>
@@ -101,11 +142,26 @@
     <center><h1>Tablets</h1></center>
     <div class="container justify-content-center">
         <div class="row">
-            @for (int i = 0; i < Model.Laptops.Rows.Count; i++)
+            @for (int i = 0; i < Model.Tablets.Rows.Count; i++)
             {
+                float discountPrice = 0;
                 <div class="col-lg-4">
                     <div class="container d-flex justify-content-center">
                         <figure class="card card-product-grid card-lg">
+                            @if (!Convert.IsDBNull(Model.Tablets.Rows[i]["Discount"]))
+                            {
+                                if (Convert.ToInt32(Model.Tablets.Rows[i]["Discount"]) != null)
+                                {
+                                    discountPrice = Model.Tablets.Rows[i]["price"]-(Model.Tablets.Rows[i]["price"] * Model.Tablets.Rows[i]["Discount"]) / 100;
+                                    <div id="content" class="ms-auto">
+                                        <div class="discount-label red"> <span>-@Model.Tablets.Rows[i]["Discount"].ToString()%</span> </div>
+                                    </div>
+                                }
+                            }
+                            else
+                            {
+                                discountPrice = 0;
+                            }
                             <a href="#" class="img-wrap" data-abc="true">
                                 <img src="@Model.Tablets.Rows[i]["image"].ToString()">
                             </a>
@@ -120,10 +176,14 @@
                             <div class="bottom-wrap-payment">
                                 <figcaption class="info-wrap">
                                     <div class="row">
-                                        <div class="col-md-9 col-xs-9"> <a href="#" class="title" data-abc="true">$@Model.Tablets.Rows[i]["price"].ToString()</a> <span class="rated">@Model.Tablets.Rows[i]["payment_method"].ToString()</span> </div>
-                                        <div class="col-md-3 col-xs-3">
-                                            <div class="rating text-right"> #### 8787 </div>
-                                        </div>
+                                        @if (discountPrice != 0)
+                                        {
+                                            <div class="col-md-9 col-xs-9"> <a href="#" class="title" data-abc="true"><s>$@Model.Tablets.Rows[i]["price"]</s> $@discountPrice</a> <span class="rated">@Model.Tablets.Rows[i]["payment_method"].ToString()</span> </div>
+                                        }
+                                        else
+                                        {
+                                            <div class="col-md-9 col-xs-9"> <a href="#" class="title" data-abc="true">$@Model.Tablets.Rows[i]["price"]</a> <span class="rated">@Model.Tablets.Rows[i]["payment_method"].ToString()</span> </div>
+                                        }
                                     </div>
                                 </figcaption>
                             </div>

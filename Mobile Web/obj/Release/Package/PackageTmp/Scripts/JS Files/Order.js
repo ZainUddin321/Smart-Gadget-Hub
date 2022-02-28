@@ -26,7 +26,7 @@ function validate() {
     {
         textphone.innerHTML = "";
         textpin.innerHTML = "";
-        alert("Your have successfully ordered your product.");
+        alert("Your Order has successfully reached to us.");
         return true;
     }
 
