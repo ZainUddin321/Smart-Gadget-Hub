@@ -4,3 +4,9 @@ F:\source\repos\Mobile Web\Mobile Web.Models\obj\Release\Mobile Web.Models.cspro
 F:\source\repos\Mobile Web\Mobile Web.Models\obj\Release\Mobile Web.Models.dll
 F:\source\repos\Mobile Web\Mobile Web.Models\obj\Release\Mobile Web.Models.pdb
 F:\source\repos\Mobile Web\Mobile Web.Models\obj\Release\Mobile Web.Models.csprojAssemblyReference.cache
+G:\source\repos\Mobile Web\Mobile Web.Models\bin\Release\Mobile Web.Models.dll
+G:\source\repos\Mobile Web\Mobile Web.Models\bin\Release\Mobile Web.Models.pdb
+G:\source\repos\Mobile Web\Mobile Web.Models\obj\Release\Mobile Web.Models.csproj.AssemblyReference.cache
+G:\source\repos\Mobile Web\Mobile Web.Models\obj\Release\Mobile Web.Models.csproj.CoreCompileInputs.cache
+G:\source\repos\Mobile Web\Mobile Web.Models\obj\Release\Mobile Web.Models.dll
+G:\source\repos\Mobile Web\Mobile Web.Models\obj\Release\Mobile Web.Models.pdb

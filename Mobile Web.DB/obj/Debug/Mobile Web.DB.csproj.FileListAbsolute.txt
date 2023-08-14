@@ -12,3 +12,17 @@ F:\source\repos\Mobile Web\Mobile Web.DB\obj\Debug\Mobile Web.DB.csproj.CoreComp
 F:\source\repos\Mobile Web\Mobile Web.DB\obj\Debug\Mobile Web.DB.csproj.CopyComplete
 F:\source\repos\Mobile Web\Mobile Web.DB\obj\Debug\Mobile Web.DB.dll
 F:\source\repos\Mobile Web\Mobile Web.DB\obj\Debug\Mobile Web.DB.pdb
+G:\source\repos\Mobile Web\Mobile Web.DB\bin\Debug\Mobile Web.DB.dll.config
+G:\source\repos\Mobile Web\Mobile Web.DB\bin\Debug\Mobile Web.DB.dll
+G:\source\repos\Mobile Web\Mobile Web.DB\bin\Debug\Mobile Web.DB.pdb
+G:\source\repos\Mobile Web\Mobile Web.DB\bin\Debug\EntityFramework.dll
+G:\source\repos\Mobile Web\Mobile Web.DB\bin\Debug\EntityFramework.SqlServer.dll
+G:\source\repos\Mobile Web\Mobile Web.DB\bin\Debug\Mobile Web.Models.dll
+G:\source\repos\Mobile Web\Mobile Web.DB\bin\Debug\Mobile Web.Models.pdb
+G:\source\repos\Mobile Web\Mobile Web.DB\bin\Debug\EntityFramework.xml
+G:\source\repos\Mobile Web\Mobile Web.DB\bin\Debug\EntityFramework.SqlServer.xml
+G:\source\repos\Mobile Web\Mobile Web.DB\obj\Debug\Mobile Web.DB.csproj.AssemblyReference.cache
+G:\source\repos\Mobile Web\Mobile Web.DB\obj\Debug\Mobile Web.DB.csproj.CoreCompileInputs.cache
+G:\source\repos\Mobile Web\Mobile Web.DB\obj\Debug\Mobile Web.DB.csproj.CopyComplete
+G:\source\repos\Mobile Web\Mobile Web.DB\obj\Debug\Mobile Web.DB.dll
+G:\source\repos\Mobile Web\Mobile Web.DB\obj\Debug\Mobile Web.DB.pdb

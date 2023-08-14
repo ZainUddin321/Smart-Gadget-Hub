@@ -70,12 +70,12 @@ namespace Mobile_Web.Controllers
                     return RedirectToAction("Accessories", "Home");
                 }
             };*/
-            return RedirectToAction("Index");
+            return Redirect("Index");
         }
         public ActionResult deleteCart(int id)
         {
             repo.deleteData(id);
-            return RedirectToAction("Index");
+            return Redirect("../Index");
         }
         [HttpPost]
         public ActionResult addOrder(string username,string email,string phone,string address,string pinnumber)

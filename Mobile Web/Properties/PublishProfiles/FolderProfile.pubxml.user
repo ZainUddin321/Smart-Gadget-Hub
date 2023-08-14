@@ -4,7 +4,9 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 -->
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <_PublishTargetUrl>F:\Mobile Web Project\Mobile Web</_PublishTargetUrl>
+    <_PublishTargetUrl>G:\Mobile Web Project\LatestDLL</_PublishTargetUrl>
+    <History>True|2023-08-14T13:36:02.5107133Z;True|2023-08-14T17:32:08.8098572+05:00;</History>
+    <LastFailureDetails />
   </PropertyGroup>
   <ItemGroup>
     <File Include="bin/EntityFramework.dll">
@@ -20,25 +22,25 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>07/25/2012 11:48:56</publishTime>
     </File>
     <File Include="bin/Mobile Web.DB.dll">
-      <publishTime>06/28/2021 23:16:07</publishTime>
+      <publishTime>08/14/2023 17:31:54</publishTime>
     </File>
     <File Include="bin/Mobile Web.DB.dll.config">
       <publishTime>05/18/2021 22:24:17</publishTime>
     </File>
     <File Include="bin/Mobile Web.DB.pdb">
-      <publishTime>06/28/2021 23:16:07</publishTime>
+      <publishTime>08/14/2023 17:31:54</publishTime>
     </File>
     <File Include="bin/Mobile Web.dll">
-      <publishTime>02/28/2022 17:44:58</publishTime>
+      <publishTime>08/14/2023 18:35:52</publishTime>
     </File>
     <File Include="bin/Mobile Web.Models.dll">
-      <publishTime>06/24/2021 15:41:50</publishTime>
+      <publishTime>08/14/2023 17:31:52</publishTime>
     </File>
     <File Include="bin/Mobile Web.Models.pdb">
-      <publishTime>06/24/2021 15:41:50</publishTime>
+      <publishTime>08/14/2023 17:31:52</publishTime>
     </File>
     <File Include="bin/Mobile Web.pdb">
-      <publishTime>02/28/2022 17:44:58</publishTime>
+      <publishTime>08/14/2023 18:35:52</publishTime>
     </File>
     <File Include="bin/roslyn/csc.exe">
       <publishTime>08/08/2018 05:38:48</publishTime>
@@ -398,7 +400,10 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>06/23/2021 12:31:02</publishTime>
     </File>
     <File Include="Content/Style.css">
-      <publishTime>12/14/2021 21:27:36</publishTime>
+      <publishTime>08/14/2023 17:29:14</publishTime>
+    </File>
+    <File Include="EstartupDatabase.bak">
+      <publishTime>12/14/2021 23:04:02</publishTime>
     </File>
     <File Include="Fonts/AGENCYB.TTF">
       <publishTime>01/17/2021 02:32:36</publishTime>
@@ -5936,19 +5941,19 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>12/28/2021 18:10:53</publishTime>
     </File>
     <File Include="Views/Compare/Laptops.cshtml">
-      <publishTime>06/24/2021 17:07:27</publishTime>
+      <publishTime>08/14/2023 17:26:57</publishTime>
     </File>
     <File Include="Views/Compare/Smartphones.cshtml">
-      <publishTime>12/28/2021 18:35:04</publishTime>
+      <publishTime>08/14/2023 17:27:33</publishTime>
     </File>
     <File Include="Views/Compare/Tablets.cshtml">
-      <publishTime>06/24/2021 02:12:53</publishTime>
+      <publishTime>08/14/2023 17:27:45</publishTime>
     </File>
     <File Include="Views/Home/Accessories.cshtml">
-      <publishTime>12/28/2021 17:53:25</publishTime>
+      <publishTime>08/14/2023 18:16:00</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
-      <publishTime>02/03/2021 18:05:24</publishTime>
+      <publishTime>08/14/2023 15:39:04</publishTime>
     </File>
     <File Include="Views/Home/Support.cshtml">
       <publishTime>02/28/2022 15:04:50</publishTime>
@@ -5960,7 +5965,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>02/04/2021 16:33:58</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>02/28/2022 17:45:05</publishTime>
+      <publishTime>08/14/2023 18:35:55</publishTime>
     </File>
   </ItemGroup>
 </Project>
